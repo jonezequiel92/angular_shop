@@ -2,7 +2,17 @@
 
 {{ title }}
 
-<div *ngIf="title === 'jona'">Esto es un div</div>
+<app-product></app-product>
+
+<!-- <div *ngIf="title === 'jona'">Esto es jona</div>
+<div *ngIf="title === 'Mika'">Esto es Mika</div> -->
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'jona'">Este es jona</p>
+  <p *ngSwitchCase="'mika'">Este es mika</p>
+  <p *ngSwitchCase="'kevin'">Este es kevin</p>
+  <p *ngSwitchDefault>Este es el por defecto</p>
+</div>
 
 <button (click)="addItem()">Add Item</button>
 
@@ -13,3 +23,9 @@
     <button (click)="deleteItem(i)">Delete</button>
   </li>
 </ul>
+
+<div *ngFor="let product of products">
+  {{ product.title }}
+  <img [src]="product.image" alt="{{ product.description }}" />
+  {{ product.price }}
+</div>
