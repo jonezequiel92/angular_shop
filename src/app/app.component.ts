@@ -25,6 +25,13 @@ export class AppComponent {
     this.heroes.splice(index, 1);
   }
 
+  clickProduct(id: number) {
+    console.log('Product');
+    console.log(id);
+  }
+
+  power = 10;
+
   products: Product[] = [
     {
       id: '1',

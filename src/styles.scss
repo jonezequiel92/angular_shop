@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+$color-dager: #a32b1e;
+$color-success: linear-gradient(270deg, #95ca3e 0, #95ca3e 50%, #85c638);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); // nos hará breakpoints cada 300px
+}
+
+// @media (min-width: 576px) {
+//   .product-grid {
+//     grid-template-columns: repeat(3, 1fr);
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .product-grid {
+//     grid-template-columns: repeat(4, 1fr);
+//   }
+// }
+
+// @media (min-width: 1024px) {
+//   .product-grid {
+//     grid-template-columns: repeat(5, 1fr);
+//   }
+// }
+
+// @media (min-width: 1920px) {
+//   .product-grid {
+//     grid-template-columns: repeat(6, 1fr);
+//   }
+// }
