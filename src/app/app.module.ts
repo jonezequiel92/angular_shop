@@ -4,40 +4,34 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
-import { ExponentialPipe } from './exponential.pipe';
-import { HighlightDirective } from './highlight.directive';
-import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product/product.component';
+
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { BannerComponent } from './banner/banner.component';
 
-import { SwiperModule } from 'swiper/angular';
+
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
+import { SharedModule } from './shared/shared.module';
+// import { ProductsService } from './core/services/products/products.service';
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    ExponentialPipe,
-    HighlightDirective,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     DemoComponent,
-    FooterComponent,
-    HeaderComponent,
-    BannerComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })
