@@ -1,51 +1,53 @@
-import { Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Product } from './../../models/product.model';
+import { Product } from './../../../core/models/product.model';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.scss']
 })
-export class ProductsService {
+export class ProductsComponent implements OnInit {
 
   products: Product[] = [
     {
       id: '1',
-      image: 'assets/images/camiseta.png',
+      image: '../../../../assets/camiseta.png',
       title: 'Camiseta',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '2',
-      image: 'assets/images/hoodie.png',
+      image: '../../../../assets/hoodie.png',
       title: 'Hoodie',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '3',
-      image: 'assets/images/mug.png',
+      image: '../../../../assets/mug.png',
       title: 'Mug',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '4',
-      image: 'assets/images/pin.png',
+      image: '../../../../assets/pin.png',
       title: 'Pin',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '5',
-      image: 'assets/images/stickers1.png',
+      image: '../../../../assets/stickers1.png',
       title: 'Stickers',
       price: 80000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '6',
-      image: 'assets/images/stickers2.png',
+      image: '../../../../assets/stickers2.png',
       title: 'Stickers',
       price: 80000,
       description: 'bla bla bla bla bla'
@@ -54,11 +56,12 @@ export class ProductsService {
 
   constructor() { }
 
-  getAllProducts() {
-    return this.products;
+  ngOnInit() {
   }
 
-  getProduct(id: string) {
-    return this.products.find(item => id === item.id);
+  clickProduct(id: number) {
+    console.log('product');
+    console.log(id);
   }
+
 }
