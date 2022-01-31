@@ -6,6 +6,7 @@ import { ExponentialPipe } from './pipes/exponential.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
     FooterComponent
   ],
   imports: [
-    CommonModule, RouterModule
+    CommonModule, RouterModule, MaterialModule
   ]
 })
 export class SharedModule { }

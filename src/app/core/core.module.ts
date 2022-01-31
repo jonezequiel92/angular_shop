@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductsService } from './services/products/products.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [
     ProductsService

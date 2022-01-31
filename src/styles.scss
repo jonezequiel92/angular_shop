@@ -2,24 +2,40 @@
 $color-dager: #a32b1e;
 $color-success: linear-gradient(270deg, #95ca3e 0, #95ca3e 50%, #85c638);
 
-body {
-  margin: 0;
-  padding: 0;
-}
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(300px, 1fr)
-  ); // nos hará breakpoints cada 300px
+    
+  );
+  grid-gap: 50px 20px 
 }
 
-// @media (min-width: 576px) {
-//   .product-grid {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
+.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    max-width: 1110px;
+    padding-right: 16px;
+    padding-left: 16px;
+    
+  }
+}
 
 // @media (min-width: 768px) {
 //   .product-grid {
@@ -38,3 +54,6 @@ body {
 //     grid-template-columns: repeat(6, 1fr);
 //   }
 // }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

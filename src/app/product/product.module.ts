@@ -7,18 +7,25 @@ import { ProductsComponent } from './components/products/products.component';
 
 import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from './../shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
+
 
 
 @NgModule({
   declarations: [
     ProductComponent,
     ProductDetailComponent,
-    ProductsComponent
+    ProductsComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     ProductRoutingModule,
+    FormsModule,
+    MaterialModule
+    
+
 
   ]
 })
