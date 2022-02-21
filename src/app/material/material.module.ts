@@ -12,7 +12,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 // import { MatCardModule } from '@angular/material/card';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatSortModule } from '@angular/material/sort';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [],
@@ -25,7 +32,15 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatSortModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    LayoutModule
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +50,15 @@ import { MatRadioModule } from '@angular/material/radio';
     MatCardModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatListModule,
+    MatSortModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    LayoutModule
   ],
 })
 export class MaterialModule {}
